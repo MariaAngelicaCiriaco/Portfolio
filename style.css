@@ -10,13 +10,13 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
  }
  
  html, body{
     min-height: 100vh;
     background-color: #0d0305;
+    color: aliceblue;
  }
  
   header{
@@ -56,8 +56,7 @@
 
  section{
     padding-top:25vh;
-    padding-bottom: 20vh;
-    margin-bottom: 45px;
+    padding-bottom: 10vh;
  }
  .home{
     display: flex;
@@ -66,8 +65,8 @@
     padding-top: 3rem;
  }
  .home .img{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     overflow: hidden;
     border: 10px solid #400112;
@@ -88,89 +87,89 @@
     display: flex;
     flex-direction: column;
  }
- .text h5{
-    color: rgba(240, 248, 255, 0.568);
-    font-size: 17px;
- }
- .text h5 samp{
-    color: #f2a2a2;
-    font-size: 25px;
-    margin-left: 10px;
- }
  .text h1{
-    color: #f2a2a2;
-    font-size: 3rem;
-    padding-bottom: 15px;
-    letter-spacing: 1px;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 80px;
+    color: aliceblue;
+    position: relative;
+ 
  }
+
+ /*fazer a animação do h5*/
+ .animate{
+   position: relative;
+ }
+ .animate h5{
+    font-size: 30px;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: .1px #f2a2a2;
+ }
+
  .text p{
     color: rgba(240, 248, 255, 0.599);
     line-height: 25px;
     font-size: 18px;
+    padding-top:20px;
  }
- button{
-    width: 8rem;
-    background-color:#f2a2a2;
+ .button{
+    width: 10rem;
+    background-color:transparent;
     padding: 12px 25px;
     margin: 40px 0px;
     margin-right: 7px;
-    border-radius: 20px;
-    border:  1px solid white
+    border-radius: 10px;
+    border:  2px solid #f2a2a2;
+    cursor: pointer;
  }
- button a{
-    color: aliceblue;
+ .button:hover{
+   background-color: aliceblue;
+ }
+ .button a{
+   color: #f2a2a2;
  }
  
+ /* seção Sobre mim*/
  .sobreMim{
-    border-top: 0.2px solid #f2a2a2;
+    display: flex;
+    justify-content: space-around;
+    padding: 150px 0px;
     width: 100%;
-    padding: 100px 0px;
-    padding-top:25vh;
-    padding-bottom: 20vh;
-    margin-bottom: 45px;
+    flex-wrap: wrap;
+    
  }
 
- .sobre{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 1150px;
-    margin: 0 auto;
- }
-    
  .texto{
-    width: 600px;
+    width: 700px;
  }
  .texto h2{
-    color: aliceblue;
+    text-align: center;
     font-size: 50px;
     text-transform: capitalize;
-    margin-bottom: 20px;
- }
- .texto h5{
-    color: aliceblue;
-    letter-spacing: 2px;
-    font-size: 20px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
+    margin-bottom: 30px;
  }
  .texto p{
     color: rgba(240, 248, 255, 0.599);
     line-height: 25px;
     font-size: 18px;
-    margin-bottom: 45px;
-     
+    text-align: justify;
  }
 
+ @media screen  and (max-width: 414px){
+   .texto p{
+      font-size: 12px;
+      width: 400px;
+      padding: 15px;
+      text-align: center;
+
+   }
+   
+ }
  
-
-
+ /*Habilidades*/
 
  
-
-
-
-
 
 /*
 
@@ -258,5 +257,14 @@
 .footer p{
     color: white;
 }
+
+
+/*animações do h1 do home*/
+@keyframes showRight{
+   100%{
+      width: 0;
+   }
+}
+
 
 
