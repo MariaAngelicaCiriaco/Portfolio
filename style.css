@@ -2,10 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&family=Inter:wght@200;300;400;500&family=Lato:wght@400;700&family=Open+Sans:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto',sans-serif;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -13,12 +15,64 @@
     transition: .2s linear;
  }
  
+ 
  html, body{
     min-height: 100vh;
     background-color: #0d0305;
-    color: aliceblue;
  }
- 
+ /*Barra de Rolagem*/
+ html::-webkit-scrollbar{
+   width: .5rem;
+ }
+ html::-webkit-scrollbar-track{
+   background: transparent;
+ }
+ html::-webkit-scrollbar-thumb{
+   background: #f2a2a2;
+   border-radius: 5rem;
+ }
+ /*Para todos os titulos*/
+ .titulo{
+   text-align: center;
+   align-items: center;
+   color: aliceblue;
+   text-transform: capitalize;
+   padding-bottom: 3.5rem;
+   font-size: 40px;
+ }
+ .button{
+   cursor: pointer;
+   background-color: transparent;
+   border: 1.5px solid white;
+   width: fit-content;
+   display: block;
+   margin: 30px 0px;
+   padding: 10px 22px;
+   font-size: 16px;
+   color: white;
+   position: relative;
+   z-index: 10;
+ }
+ button .overlay{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color: #f2a2a2;
+   z-index: -1;
+   transition: 1s;
+ }
+ button:hover .overlay{
+   width: 100%;
+ }
+ section{
+   padding-top: 20vh;
+   padding-bottom: 10vh;
+   line-height: 2rem;
+   padding-left: 30px;
+ }
+
   header{
     background-color: #0d0305;
     display: flex;
@@ -32,10 +86,9 @@
     right: 0;
     z-index: 1000;
  }
-
  nav a{
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-left: 20px;
     color: #f2a2a2;
  }
@@ -54,23 +107,22 @@
     color: aliceblue;
  }
 
- section{
-    padding-top:25vh;
-    padding-bottom: 10vh;
- }
- .home{
+
+/*Home*/
+ .content{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding-top: 3rem;
  }
  .home .img{
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     overflow: hidden;
-    border: 10px solid #400112;
+    border: 10px solid #25020b;
     box-shadow: 5px 7px 25px #40011260;
+    background-color: #25020b;
 
  }
  .img img{
@@ -88,7 +140,7 @@
     flex-direction: column;
  }
  .text h1{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
     line-height: 80px;
     color: aliceblue;
@@ -96,15 +148,9 @@
  
  }
 
- /*fazer a animação do h5*/
- .animate{
-   position: relative;
- }
- .animate h5{
-    font-size: 30px;
-    font-weight: bold;
-    color: transparent;
-    -webkit-text-stroke: .1px #f2a2a2;
+ .animate h5 span{
+   color: #f2a2a2;
+   font-size: 25px;
  }
 
  .text p{
@@ -113,158 +159,170 @@
     font-size: 18px;
     padding-top:20px;
  }
- .button{
-    width: 10rem;
-    background-color:transparent;
-    padding: 12px 25px;
-    margin: 40px 0px;
-    margin-right: 7px;
-    border-radius: 10px;
-    border:  2px solid #f2a2a2;
-    cursor: pointer;
+
+
+/*SOBRE MIM*/
+ .sobreMim .sobre{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap; 
+}
+.texto{
+   width: 700px;
+   background-color: #25020b;
+   border: 1px solid #3d0b17;
+   padding: 3rem;
+}
+.texto p{
+   color: rgba(240, 248, 255, 0.599);
+   line-height: 25px;
+   font-size: 18px;
+   text-align: justify;
+}
+/*MINHAS HABILIDADES*/
+.habilidades .container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+   gap: 1.5rem;
+}
+.habilidades .container .box{
+   height: 120px;
+   width: 120px;
+   padding: 1.5rem;
+   text-align: center;
+   border: 1px solid #f2a2a2;
+   border-radius: 5px;
+}
+.box .simb{
+   font-size: 5rem;
+   color: white;
+}
+.box:hover{
+   transform: scale(1.2);
+}
+
+/**MEUS PROJETOS*/
+.projetos{
+   color: white;
+}
+.projetos .project{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+ .projetos .project .conteudo{
+   position: relative;
+   max-width: 340px;
+   height: fit-content;
+   margin: 10px;
+   cursor: pointer;
+}
+ .projetos .project .conteudo img{
+   width: 100%;
+   display: block;
  }
- .button:hover{
-   background-color: aliceblue;
+ .projetos .project .conteudo .legendas{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   background: linear-gradient(#f2a2a25b, #f2a2a25b);
+   border: 1px solid #f2a2a2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   transform: 1s;
+   font-size: 18px;
+   letter-spacing: 3px;
+   opacity: 0;
  }
- .button a{
-   color: #f2a2a2;
+ .projetos .project .conteudo .legendas h3{
+   margin-bottom: 10px;
+   transition: 1s;
  }
+ .projetos .project .conteudo .legendas:hover{
+   opacity: 1;
+ }
+ .projetos .project .conteudo .legendas h3:hover{
+   margin-bottom: 0px;
+ }
+
  
- /* seção Sobre mim*/
- .sobreMim{
-    display: flex;
-    justify-content: space-around;
-    padding: 150px 0px;
-    width: 100%;
-    flex-wrap: wrap;
-    
- }
-
- .texto{
-    width: 700px;
- }
- .texto h2{
-    text-align: center;
-    font-size: 50px;
-    text-transform: capitalize;
-    margin-bottom: 30px;
- }
- .texto p{
-    color: rgba(240, 248, 255, 0.599);
-    line-height: 25px;
-    font-size: 18px;
-    text-align: justify;
- }
-
- @media screen  and (max-width: 414px){
-   .texto p{
-      font-size: 12px;
-      width: 400px;
-      padding: 15px;
-      text-align: center;
-
+ @media (max-width: 950px) {
+   html{
+      font-size: 50%;
+   }
+   .header{
+      padding: 1.5rem 2rem;
+   }
+   section{
+      padding: 2rem;
    }
    
  }
- 
- /*Habilidades*/
 
- 
+ @media (max-width:700px) {
 
-/*
-
-.projetos{
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 3rem 0;
-}
-.card-caixa{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-}
-.card{
-    width: 240px;
-    height: 240px;
-    border-radius: 2%;
-    margin: 3rem 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #9e8798;
-    background-image: url();
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*efeito*
-    filter: grayscale(0.5);
-    color: #363643;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-}
-.card-texto{
-    width: 40%;
-    letter-spacing: 1px;
-    color: rgb(142, 142, 142);
-}
-.nomes-do-meio{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.nomes-do-meio h2{
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-    transform: 0.5s ease-in-out;
-}
-.nomes-do-meio p{
-    font-size: 0;
-    visibility: visible;
-    opacity: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    transform: 0.5s ease-in-out;
-}
-.card:hover{
-    filter: unset;
-}
-.card:hover > .nomes-do-meio p{
-    opacity: 1;
-    visibility: visible;
-    font-size: 14px;
-}
-*/
-
-.footer{
-    width: 100%;
-    height: 60px;
-    background-color: #0d0305;
-    border-top: 0.2px solid #f2a2a2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.footer p{
-    color: white;
-}
-
-
-/*animações do h1 do home*/
-@keyframes showRight{
-   100%{
-      width: 0;
+   .header .nav{
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: white;
+      width: 30rem;
+      height: calc(100vh - 9.5rem);
    }
-}
+   .header .nav a{
+      color:var(--black);
+      display: block;
+      margin:1.5rem;
+      padding:.5rem;
+      font-size: 2rem;
+  }
 
+   .titulo{
+      font-size: 30px;
+   }
 
+   .content{
+      flex-direction: column;
+      padding-top: 10rem;
+   }
+   .content h1{
+      font-size: 40px;
+   }
+   .text{
+      padding: 40px 0;
+   }
+   
 
+  .habilidades .container{
+   display: block;
+   width: 50%;
+  }
+  .habilidades .container .box{
+   width: 100%;
+   padding: 40x;
+   margin: 30px;
+  }
+  .projetos .project{
+   display: block;
+   width: 100%;
+  }
+  .projetos .project .conteudo{
+   max-width: 100%;
+  }
+  .projetos .project .conteudo img{
+   width: 100%;
+  }
+   
+ }
+
+ @media (max-width:450px){
+
+   html{
+       font-size: 50%;
+   }
+
+ }

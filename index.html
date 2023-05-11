@@ -5,122 +5,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="shortcut icon" href="favicon/browser.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
     <title>Angélica Ciriaco</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="nav">
-            <a href="">Home</a>
-            <a href="">Sobre Mim</a>
-            <a href="">Habilidades</a>
-            <a href="">Projetos</a>
-        </nav
+            <a href="#home">Home</a>
+            <a href="#sobreMim">Sobre Mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
         <div class="icons">
             <a href="https://www.linkedin.com/in/maria-ang%C3%A9lica-ciriaco-44a579254/"><samp class="icon"><ion-icon name="logo-linkedin"></ion-icon></samp></a>
             <a href="https://github.com/MariaAngelicaCiriaco"><samp class="icon"><ion-icon name="logo-github"></ion-icon></samp></a>
-        </div>
     </header>
 
-    <section class="home1">
-        <div class="home">
+    <section class="home" id="home">
+        <div class="content">
             <div class="img">
-                <img src="img/WhatsApp Image 2023-04-25 at 15.18.37.jpeg" alt="">
+                <img src="img/eu-removebg-preview.png" alt="">
             </div>
             <div class="text">
-                <h1>Hi, I`m Angélica Ciriaco</h1>
+                <h1>Angélica Ciriaco</h1>
                 <div class="animate">
-                    <h5>Frontend Developer</h5>
+                    <h5><span class="span">Desenvolvedor Web</span></h5>
                 </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, cum. Doloribus maxime laboriosam fugiat quaerat, ipsam possimus accusantium. Sequi, repellat velit? Impedit provident sequi at eius ipsum quisquam dolor facilis.</p>
+                <p>Sou Angélica, futura desenvolvedora web. Nasci e cresci na zona rural do interior do Rio Grande do Norte, onde tive meu primeiro contato com a área de tecnologia em 2019, quando ingressei na Universidade Federal Rural do Semiárido (UFERSA) para cursar Tecnologia da Informação.</p>
 
-                <div class="button"><a href="#">Download CV</a></div>
+                <button class="button">
+                    Download CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
             </div>
         </div>
     </section>
 
-    <section class="sobreMim">
-        <div class="texto">
-            <h2>Sobre Mim</h2>
-            <p>Olá, meu nome é Angelica e atualmente sou estudante do primeiro ciclo de Tecnologia da Informação. Sou uma pessoa curiosa e apaixonada por aprender coisas novas e desafiadoras, buscando sempre sair da rotina e me desenvolver pessoalmente e profissionalmente. </p>
-            <br>
-            <p> Tenho um grande interesse em desenvolver sistemas web, o que me levou a explorara esse mundo e aprender cada vez mais sobre esse assunto. Meus objetivos para o futuro é iniciar o segundo ciclo em Engenharia de Software na UFERSA, onde poderei aprimorar ainda mais meus conhecimentos e habilidades. </p>
-            <br>
-            <p> Estou animada com as possibilidades que o mundo da tecnologia oferece e quero contribuir para o desenvolvimento de soluções inovadoras e impactantes. Agradeço pela atenção e espero ter a oportunidade de participar de projetos desafiadores. </p>
+    <section class="sobreMim" id="sobreMim">
+        <h1 class="titulo">Sobre Mim</h1>
+        <div class="sobre">
+            <div class="texto">
+                <p>Olá, meu nome é Angelica e atualmente sou estudante do primeiro ciclo de Tecnologia da Informação. Sou uma pessoa curiosa e apaixonada por aprender coisas novas e desafiadoras, buscando sempre sair da rotina e me desenvolver pessoalmente e profissionalmente.</p>
+                <br>
+                <p>Tenho um grande interesse em desenvolver sistemas web, o que me levou a explorara esse mundo e aprender cada vez mais sobre esse assunto. Meus objetivos para o futuro é iniciar o segundo ciclo em Engenharia de Software na UFERSA, onde poderei aprimorar ainda mais meus conhecimentos e habilidades.</p>
+                <br>
+                <p>Estou animada com as possibilidades que o mundo da tecnologia oferece e quero contribuir para o desenvolvimento de soluções inovadoras e impactantes. Agradeço pela atenção e espero ter a oportunidade de participar de projetos desafiadores.</p>
+            </div>
+        </div>
+        
 
+    </section>
+
+    <section class="habilidades" id="habilidades">
+        <h1 class="titulo">Habilidades</h1>
+        <div class="container">
+            <div class="box">
+                <a class="simb" href="#"><i class="fa-brands fa-html5"></i></a>
+            </div>
+            <div class="box">
+                <a class="simb" href=""><i class="fa-brands fa-css3-alt"></i></a>
+            </div>
+            <div class="box">
+                <a class="simb" href=""><i class="fa-brands fa-square-js"></i></a>
+            </div>
+            <div class="box">
+                <a class="simb" href=""><i class="fa-brands fa-java"></i></a>
+            </div>
+            <div class="box">
+                <a href="" class="simb"><i class="fa-brands fa-git-alt"></i></a>
+            </div>
+            <div class="box">
+                <a href="" class="simb"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="box">
+                <a href="" class="simb"><i class="fa-brands fa-figma"></i></a>
+            </div>
         </div>
     </section>
 
-    <section class="habilidades">
-        <h2>Habilidades</h2>
-        <div class="box">
-            <div class="habilidade">
-                <h3>HTML <span>70%</span></h3>
-                <div class="barra"></div>
+    <section class="projetos" id="projetos">
+        <h2 class="titulo">Projetos</h2>
+        <div class="project">
+            <div class="conteudo">
+                <img src="img/background002.jpg" alt="">
+                <div class="legendas">
+                    <h3>HTML5/CSS3</h3>
+                    <p>Cordel de Nilton Duarte</p>
+                </div>
             </div>
-            <div class="habilidade">
-                <h3>HTML <span>70%</span></h3>
-                <div class="barra"></div>
+            <div class="conteudo">
+                <img src="img/bolha.jpg" alt="">
+                <div class="legendas">
+                    <h3>HTML5/CSS3</h3>
+                    <p>Bola Rosa</p>
+                </div>
             </div>
-            <div class="habilidade">
-                <h3>HTML <span>70%</span></h3>
-                <div class="barra"></div>
+            <div class="conteudo">
+                <img src="img/pokmon.jpg" alt="">
+                <div class="legendas">
+                    <h3>JavaScript</h3>
+                    <p>Pokedex</p>
+                </div>
             </div>
         </div>
     </section>
 
-
-<!--
-        <section>
-            <div class="projetos">
-                <div class="card-caixa">
-                    <div class="card">
-                        <div class="nomes-do-meio">
-                            <h2>Projeto 1</h2>
-                            <p>vem ver!</p>
-                        </div>
-                    </div>
-                    <div class="card-texto">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolorum nobis obcaecati dicta. Aperiam consequuntur nihil ad, id incidunt iusto, cum dolore sapiente neque possimus sit quia eius, veritatis dolorem.</p>
-                    </div>
-                </div>
-                <div class="card-caixa">
-                    <div class="card">
-                        <div class="nomes-do-meio">
-                            <h2>Projeto 2</h2>
-                            <p>vem ver!</p>
-                        </div>
-                    </div>
-                    <div class="card-texto">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolorum nobis obcaecati dicta. Aperiam consequuntur nihil ad, id incidunt iusto, cum dolore sapiente neque possimus sit quia eius, veritatis dolorem.</p>
-                    </div>
-                </div>
-                <div class="card-caixa">
-                    <div class="card">
-                        <div class="nomes-do-meio">
-                            <h2>Projeto 3</h2>
-                            <p>vem ver!</p>
-                        </div>
-                    </div>
-                    <div class="card-texto">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolorum nobis obcaecati dicta. Aperiam consequuntur nihil ad, id incidunt iusto, cum dolore sapiente neque possimus sit quia eius, veritatis dolorem.</p>
-                    </div>
-                </div>
-        </div>
-        </section>
-    -->
-
-
-
-    <footer class="footer">
-        <p>Angelica Ciriaco</p>
-         
-    </footer>
-
-
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+   <script>
+    var typed = new Typed(".span",{
+        strings:["Desenvolvedor Web", "Front-End", "Tecnologia da Informação"],
+        typedSpeed:70,
+        backSpeed:55,
+        loop:true
+    })
+   </script>
 </body>
 </html>
